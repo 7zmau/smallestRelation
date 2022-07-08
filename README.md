@@ -4,7 +4,7 @@
 ```commandline
 python main.py
 ```
-#### or
+**or**
 ```commandline
 python main.py s1 s2 s3
 ```
