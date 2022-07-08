@@ -2,6 +2,10 @@
 
 ### Usage
 ```commandline
+python main.py
+```
+#### or
+```commandline
 python main.py s1 s2 s3
 ```
 
