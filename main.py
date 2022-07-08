@@ -101,7 +101,11 @@ if __name__ == '__main__':
         elif arg == 1:
             ls.append(args[arg])
         else:
-            assert len(ls[0]) == len(args[arg])
+            try:
+                assert len(ls[0]) == len(args[arg])
+            except AssertionError:
+                print('Error: Invalid input.')
+                exit(1)
             ls.append(args[arg])
 
     map_relations()
