@@ -88,21 +88,35 @@ def map_relations():
 # Run the script.
 if __name__ == '__main__':
     args = sys.argv
-    if len(args) != 4:
-        print('Error running script.\nUsage: main.py s1 s2 s3')
-        exit(1)
-    for arg in range(len(args)):
-        if arg == 0:
-            continue
-        elif arg == 1:
-            ls.append(args[arg])
-        else:
-            try:
-                assert len(ls[0]) == len(args[arg])
-            except AssertionError:
-                print('Error: Invalid input.')
-                exit(1)
-            ls.append(args[arg])
+    if len(args) > 1:
+        if len(args) != 4:
+            print('Error running script.\nUsage: main.py s1 s2 s3')
+            exit(1)
+        for arg in range(len(args)):
+            if arg == 0:
+                continue
+            elif arg == 1:
+                ls.append(args[arg])
+            else:
+                try:
+                    assert len(ls[0]) == len(args[arg])
+                except AssertionError:
+                    print('Error: Invalid input.')
+                    exit(1)
+                ls.append(args[arg])
+    else:
+        print('Input strings:', end='\n')
+        for inp in range(3):
+            s = input()
+            if inp == 0:
+                ls.append(s)
+            else:
+                try:
+                    assert len(ls[0]) == len(s)
+                except AssertionError:
+                    print('Error: Invalid input.')
+                    exit(1)
+                ls.append(s)
 
     map_relations()
     # get the length of the smallest list in relmap
