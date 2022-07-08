@@ -19,10 +19,6 @@
 
 import sys
 
-inp = '''adfd
-sfdd
-ddfd'''
-
 # ls: list of the given input strings.
 ls = []
 # relmap: dictionary of characters mapped to the list of
